@@ -1,0 +1,118 @@
+# JavaScript Style Guide
+
+For my own reference.
+
+[Coding Style](#styles)  
+[Sublime Setup](#sublime-setup)  
+[Sublime Plugins](#sublime-plugins)  
+
+## [Coding Style](id:styles)
+
+### General
+
+Strict mode on. Wrap everything in a closure if need be:
+
+	(function() {
+	  'use strict';
+	  ...
+	}());
+
+2-space soft tabs. Always.
+
+	var something = {
+	  one: 1,
+	  mow: true,
+	  items: [
+	    'one',
+	    'two',
+	    'three'
+	  ]
+	};
+
+Single quotes. Always:
+
+	var something = 'Hello there.';
+	var items = ['Hello', 'there'];
+
+camelCase variable/function/property names: [^1]
+
+	var someVariable;
+	function doSomething(inputVar, fn) {};
+
+[^1]: Underscores look better, but the JS community seems to prefer camels.
+
+### Variables
+
+Single var statement with variable declarations without assignments:
+
+	var one, two, three;
+
+Multiple var statements with assignments: [^2]
+
+	var one = 1;
+	var two = 2;
+	var three = { wibble: 'wobble' };
+
+[^2]: [http://benalman.com/news/2012/05/multiple-var-statements-javascript/]()
+
+camelCase variable/function/property names:
+
+	var someVariable;
+
+### Comments
+
+Sentence-case. Speak as a human:
+
+	// Iterate over the cats and make them mow
+	cats.forEach(function(){ … })
+
+[JSDoc](http://usejsdoc.org/)-compliant documentation:
+
+    /**
+     * Does something totally pointless
+     * @param  {string} one
+     * @param  {string} two
+     * @param  {string} three
+     * @return {string}
+     */
+    function someFunction(one, two, three) {
+      return (one + two + three).join('');
+    }
+
+## [Sublime Setup](id:#sublime-setup)
+
+Always work inside a Sublime Project. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/sample-project.sublime-project).
+
+JavaScript/JSON-specific syntax settings [here](https://github.com/lukemartin/js-style-guide/blob/master/JavaScript.sublime-settings).
+
+## [Sublime Plugins](id:#sublime-plugins)
+
+Always favour project-specific config over global. Tailor to each project.
+
+### JSHint
+
+Install [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) and [JSHint](http://jshint.org/) from Package Manager.
+
+Per-project JSHint config stored in `.jshintrc`. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/.jshintrc).
+
+Global config stored in `SublimeLinter.sublime-settings`. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/SublimeLinter.sublime-settings).
+
+### TernJS
+
+Install [sublime-tern](https://github.com/emmetio/sublime-tern) from Package Manager.
+
+Per-project config stored in `.tern-project`. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/.tern-project).
+
+Remember to use Tern's plugins config for any external libraries for extensive completion.
+
+### JsFormat
+
+Install [JsFormat](https://github.com/jdc0589/JsFormat) from Package Manger.
+
+Per-project config stored in `.jsbeautifyrc`. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/.jsbeautifyrc).
+
+Global config stored in `JsFormat.sublime-settings`. Example [here](https://github.com/lukemartin/js-style-guide/blob/master/JsFormat.sublime-settings).
+
+### DocBlockr
+
+Install [DocBlockr](https://github.com/spadgos/sublime-jsdocs) from Package Manager.
