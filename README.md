@@ -12,10 +12,12 @@ For my own reference.
 
 Strict mode on. Wrap everything in a closure if need be:
 
+	```javascript
 	(function() {
 	  'use strict';
 	  ...
 	}());
+	```
 
 2-space soft tabs. Always.
 
@@ -34,12 +36,11 @@ Single quotes. Always:
 	var something = 'Hello there.';
 	var items = ['Hello', 'there'];
 
-camelCase variable/function/property names: [^1]
+camelCase variable/function/property names:  
+(Underscores look better, but the JS community seems to prefer camels.)
 
 	var someVariable;
 	function doSomething(inputVar, fn) {};
-
-[^1]: Underscores look better, but the JS community seems to prefer camels.
 
 ### Variables
 
@@ -47,13 +48,12 @@ Single var statement with variable declarations without assignments:
 
 	var one, two, three;
 
-Multiple var statements with assignments: [^2]
+Multiple var statements with assignments:  
+(See [http://benalman.com/news/2012/05/multiple-var-statements-javascript/]())
 
 	var one = 1;
 	var two = 2;
 	var three = { wibble: 'wobble' };
-
-[^2]: [http://benalman.com/news/2012/05/multiple-var-statements-javascript/]()
 
 camelCase variable/function/property names:
 
