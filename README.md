@@ -12,72 +12,88 @@ For my own reference.
 
 Strict mode on. Wrap everything in a closure if need be:
 
-	```javascript
-	(function() {
-	  'use strict';
-	  ...
-	}());
-	```
+```js
+(function() {
+  'use strict';
+  // …
+}());
+```
 
 2-space soft tabs. Always.
 
-	var something = {
-	  one: 1,
-	  mow: true,
-	  items: [
-	    'one',
-	    'two',
-	    'three'
-	  ]
-	};
+```js
+var something = {
+  one: 1,
+  mow: true,
+  items: [
+    'one',
+    'two',
+    'three'
+  ]
+};
+```
 
 Single quotes. Always:
 
-	var something = 'Hello there.';
-	var items = ['Hello', 'there'];
+```js
+var something = 'Hello there.';
+var items = ['Hello', 'there'];
+```
 
 camelCase variable/function/property names:  
 (Underscores look better, but the JS community seems to prefer camels.)
 
-	var someVariable;
-	function doSomething(inputVar, fn) {};
+```js
+var someVariable;
+function doSomething(inputVar, fn) {};
+```
 
 ### Variables
 
 Single var statement with variable declarations without assignments:
 
-	var one, two, three;
+```js
+var one, two, three;
+```
 
 Multiple var statements with assignments:  
 (See [http://benalman.com/news/2012/05/multiple-var-statements-javascript/]())
 
-	var one = 1;
-	var two = 2;
-	var three = { wibble: 'wobble' };
+```js
+var one = 1;
+var two = 2;
+var three = { wibble: 'wobble' };
+```
 
 camelCase variable/function/property names:
 
-	var someVariable;
+```js
+var someVariable;
+```
 
 ### Comments
 
 Sentence-case. Speak as a human:
 
-	// Iterate over the cats and make them mow
-	cats.forEach(function(){ … })
+```js
+// Iterate over the cats and make them mow
+cats.forEach(function(){ … })
+```
 
 [JSDoc](http://usejsdoc.org/)-compliant documentation:
 
-    /**
-     * Does something totally pointless
-     * @param  {string} one
-     * @param  {string} two
-     * @param  {string} three
-     * @return {string}
-     */
-    function someFunction(one, two, three) {
-      return (one + two + three).join('');
-    }
+```js
+/**
+ * Does something totally pointless
+ * @param  {string} one
+ * @param  {string} two
+ * @param  {string} three
+ * @return {string}
+ */
+function someFunction(one, two, three) {
+  return (one + two + three).join('');
+}
+```
 
 ## [Sublime Setup](id:#sublime-setup)
 
